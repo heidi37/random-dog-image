@@ -34,18 +34,22 @@ img {
 .img-0 {
   background: URL('./dog-0.jpeg');
   background-size: cover;
+  background-position: 50% 50%;
 }
 .img-1 {
   background: URL('./dog-1.jpeg');
   background-size: cover;
+  background-position: 50% 50%;
 }
 .img-2 {
   background: URL('./dog-2.jpeg');
   background-size: cover;
+  background-position: 50% 50%;
 }
 .img-3 {
   background: URL('./dog-3.jpeg');
   background-size: cover;
+  background-position: 50% 50%;
 }
 
 h1 {
