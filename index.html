@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
-  <title>Random Dog Image Generator</title>
-</head>
-<body>
-<h1>Random Dog Pictures</h1>
-<p>Select Your Favorite Breed</p>
-<div class="custom-select">
-<select class="dog-selector"></select>
-</div>
-<button>Get Pictures!</button>
-<div class="image-gallery">
-  <img class="img img-0">
-  <img class="img img-1">
-  <img class="img img-2">
-  <img class="img img-3">
-</div>
-</body>
-<footer>
-  <small>Thanks to <a href="https://unsplash.com" target="_blank">Unsplash</a> for default images and <a href="https://dog.ceo/dog-api/" target="_blank">Dog CEO</a> for random image API and breeds list.</small>
-</footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Random Dog Image Generator">
+    <meta property="og:description" content="Single page application that retrieves random images of dogs by selected breed">
+    <meta property="og:image" content="./screenshot.png">
+    <meta property="og:url" content="https://heidifryzell.com/random-dog-photo/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Heidi Fryzell">
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SF8R56H54Q"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-SF8R56H54Q");
+    </script>
+    <script src="app.js" defer></script>
+    <title>Random Dog Image Generator</title>
+  </head>
+  <body>
+    <h1>Random Dog Pictures</h1>
+    <p>Select Your Favorite Breed</p>
+    <div class="custom-select">
+      <select class="dog-selector"></select>
+    </div>
+    <button>Get Pictures!</button>
+    <div class="image-gallery">
+      <img class="img img-0" />
+      <img class="img img-1" />
+      <img class="img img-2" />
+      <img class="img img-3" />
+    </div>
+  </body>
+  <footer>
+    <small
+      >Thanks to <a href="https://unsplash.com" target="_blank">Unsplash</a> for
+      default images and
+      <a href="https://dog.ceo/dog-api/" target="_blank">Dog CEO</a> for random
+      image API and breeds list.</small
+    >
+  </footer>
 </html>
