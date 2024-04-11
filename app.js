@@ -1,12 +1,23 @@
+document.getElementById("copyrightYear").innerText = new Date().getFullYear();
+
 const dogImages = document.querySelectorAll('img');
 const newPicButton = document.querySelector('button');
 const selectedBreed = document.querySelector('.dog-selector')
+const appContent = document.querySelector('.app-content')
+const moreDogsButton = document.querySelector('.more-dogs')
 
 window.addEventListener('load', getBreeds)
-newPicButton.addEventListener("click", getImages)
+selectedBreed.addEventListener("change", getImages)
+moreDogsButton.addEventListener("click", getImages)
 
 function getBreeds(){
   const XHR = new XMLHttpRequest();
+  const defaultOption = document.createElement('option');
+  defaultOption.value = "";
+  defaultOption.disabled = true;
+  defaultOption.selected = true;
+  defaultOption.textContent = "Select a breed";
+  selectedBreed.appendChild(defaultOption);
   XHR.open("GET", 'https://dog.ceo/api/breeds/list/all');
   XHR.send();
   XHR.onreadystatechange = function(){
@@ -32,7 +43,6 @@ function getImages() {
   XHR.onreadystatechange = function(){
     if(XHR.readyState == 4 && XHR.status == 200){
       const response = JSON.parse(XHR.responseText)
-      console.log(response)
       image.style.background = `url(${response.message})`;
       image.style.backgroundRepeat = 'no-repeat';
       image.style.backgroundSize = "cover"
@@ -41,4 +51,5 @@ function getImages() {
     }
   }
 }
+  moreDogsButton.style.display = "block";
 }
